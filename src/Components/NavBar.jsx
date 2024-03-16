@@ -46,18 +46,18 @@ const NavBar = () => {
 
 
 
-           <div className="phnSize flex justify-center items-center text-center gap-2">
+           <div className="phnSize flex justify-center items-center text-center ">
        
            <div className="middle flex md:hidden " >
     <span className="w-[18px] h-[18px] rounded-tr-[8px] rounded-br-[8px] text-[#8064A2] flex text-center items-center justify-center  "> <CiSearch className="w-[26px] h-[26px] " />    </span>
 </div>
-<div className="right  flex text-center items-center align-center   md:justify-between gap-3  ">
-    <div className="explore  h-[24px]  items-center gap-1  hidden md:flex   " onClick={navBtnClick} > <span className="icon text-[#8064A2] "><MdExplore /></span> <span className="explore font-[500] text-[14px] flex justify-center items-center gap-1 relative">Explore <FaAngleDown /> 
+<div className="right  flex text-center items-center align-center   md:justify-between gap-1 xl:gap-3  ">
+    <div className="explore  h-[24px]  items-center gap-1  hidden md:flex   " onClick={navBtnClick} > <span className="icon text-[#8064A2] "><MdExplore /></span> <span className="explore font-[500] text-[10px] xl:text-[14px] flex justify-center items-center gap-1 relative">Explore <FaAngleDown /> 
     
     <div className="absolute top-12 right-[9.6rem]"> {hide===true ? <DropDown /> : null} </div>
      </span> </div>
 
-    <div className="hobbies  h-[24px]  items-center gap-1  hidden md:flex "  > <span className="icon relative   "> <BsPentagonFill className=" text-[#8064A2] " />  <span className="absolute top-0 left-0 text-[10px] text-white  w-[100%] h-[100%] flex justify-center  items-center  "> <FaStar /> </span>   </span> <span className="explore font-[500] text-[14px] flex ustify-center items-center gap-1">Hobbies  <FaAngleDown />  </span> </div>
+    <div className="hobbies  h-[24px]  items-center gap-1  hidden md:flex "  > <span className="icon relative   "> <BsPentagonFill className=" text-[#8064A2] " />  <span className="absolute top-0 left-0 text-[10px] text-white  w-[100%] h-[100%] flex justify-center  items-center  "> <FaStar /> </span>   </span> <span className="explore font-[500] text-[10px] xl:text-[14px] flex ustify-center items-center gap-1">Hobbies  <FaAngleDown />  </span> </div>
 
     <div className="bookmark  w-[24px] h-[24px] text-[#8064A2]  hidden md:flex justify-center items-center "> <FaBookmark /> </div>
     <div className="bell  w-[24px] h-[24px] text-[#8064A2] flex justify-center items-center  "> <FaBell /> </div>
