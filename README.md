@@ -48,7 +48,6 @@ If you seem to still have issues with these commands, try running `yarn cache cl
 ## Archirecture and Project structure
 
 This project follows the `Clean Architecture`, and hence have focused the structuring of the project on the standard practices that are recommended by the `Clean Architecture`. You will find we have focused on `de-coupling` and `reusability` of the code
-![CleanArch](https://user-images.githubusercontent.com/21957552/192456113-52745765-e880-4574-ab40-9b1c3c97d6bb.png)
 
 
 This project is structured in the following way:
@@ -112,15 +111,6 @@ A React component will look the same if it is a "Page" or just a heading somewhe
 
 **Components** - Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. They are sometimes called "presentational components" and the main concern is how things look. If any other components need to use the component placed here, then it should be moved to the common `Components` folder.
 
-### What is the best way to add/develop features?
-If you want to add the UI in a particular page, first if the component is not related to core business logic add the component to Storybook repo and then you have to add/use components in the specific page folder and also add the responsive css in ComponentName.styles.ts file in the same folder. If there is a need to receive Redux state updates and dispatch actions for the feature then you should create stateUtils.ts file in utils folder of same Component folder and use useDispatch and useSelector hooks.
-If you want to add new state in the redux store then you have to create reducers in the specific page folder in core/reducers folder(if not exists then create). The same we have to do with the actions.
-If you want to call API(If API is not added then you need to add the api in services folder with specific page name folder) then you have to use it in actions.
-You have to add three actions in redux while using apis to handle reject and response in best way.
-In this app we are not using mapDispatchToProps and mapStateToProps instead we are using useDispatch and useSelector hooks.
-
-
-<img src="https://user-images.githubusercontent.com/21957552/192454831-321cd250-585c-4dc5-a902-ba19a905fd74.png" width="50%">
 
 ## License
 
