@@ -3,73 +3,125 @@
 https://65f5bb3e9a02abd2021c98dd--gregarious-kulfi-8673cb.netlify.app/
 
 
-# Getting Started with Create React App
+# Sample web repository
+## _Code architecture followed by Yogesh Project._
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://65f5bb3e9a02abd2021c98dd--gregarious-kulfi-8673cb.netlify.app/
 
-## Available Scripts
+ ✨ This repository showing that how we are using clean code architecture, folder structure, and component reusability.✨
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- _**Functionality**_  : Work correctly, efficiently, and robustly.
+- _**Readability**_    : The primary audience for our code is other developers.
+-  _**Extensibility**_ : Well-designed code should be extensible as a building                           block for solving new problems.
+- _**Scalability**_    : The code that can scale along with the need of your                            business.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [React](https://reactjs.org/) - HTML enhanced for web apps!
+- [TailWind Css] - Tailwind CSS is the greatest CSS framework for the Developers.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+Requires [Node.js](https://nodejs.org/)  to run.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install the dependencies and devDependencies and start the server.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+cd sample-web
+npm i or npm install
+node start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Package manager - Npm
+This project is using Npm as package manager, if you do not have this installed on your machine please start by looking at the [Npm docuentation and tutorials]([https://classic.yarnpkg.com/en/docs](https://docs.npmjs.com/)). After installing the package manager the following commands will be availible for you:
+- `npm install` - Installing dev dependencies unless `mode=production`
+- `npm start` - Starting the project
+- `npm run build` - Building the source files
 
-### `npm run eject`
+If you seem to still have issues with these commands, try running `yarn cache clean` and do `yarn install`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Archirecture and Project structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project follows the `Clean Architecture`, and hence have focused the structuring of the project on the standard practices that are recommended by the `Clean Architecture`. You will find we have focused on `de-coupling` and `reusability` of the code
+![CleanArch](https://user-images.githubusercontent.com/21957552/192456113-52745765-e880-4574-ab40-9b1c3c97d6bb.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project is structured in the following way:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+├── .git
+├── .gitignore
+├── package.json
+├── tailwind.config.js
+├── public
+|  └── index.html
+├── README.md
+├── src
+| └── App.css
+| └── App.js
+| └── imdex.css
+| └── imdex.js
+|  ├── App.css
+|  ├── assets
+|  |  └── DropDown.jsx
+|  |  └── FooterCont.jsx
+|  |  └── FooterIcon.jsx
+|  |  └── FooterName.jsx
+|  |  └── FooterTextHeading.jsx
+|  |  └── Heading.jsx
+|  |  └── InputForm.jsx
+|  |  └── Login.jsx
+|  |  └── Para.jsx
+|  |  └── Search.jsx
+|  |  └── SignUp.jsx
+|  |  └── Tag.jsx
+|  |  ├── buttons
+|  |     └── Buttons.jsx
+|  |     └── FormBtn.jsx
+|  |     └── LoginBtn.jsx
+|  ├── Components
+|  |  └── Card.jsx
+|  |  └── Cards.jsx
+|  |  └── Footer.jsx
+|  |  └── Heading.jsx
+|  |  └── LargeCard.jsx
+|  |  └── NavBar.jsx
+|  |  └── Testnomials.jsx
+|  ├── Images
+|  |  └── Logo.png
+|  |  └── facebook.webp
+|  |  └── google.webp
+|  |  └── image.png
+|  |  └── img1.png
+|  |  └── img2.png
+|  |  └── img3.png
 
-### Code Splitting
+     [File structure is recursive]
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**pages** - There is a index.js file where we have already defined the route component. Now when you create a new page you have to add the route in the routes group. 
 
-### Analyzing the Bundle Size
+## How should a Page component look
+A React component will look the same if it is a "Page" or just a heading somewhere, the only difference there is placement of it. These rules or guidelines should therefore be followed regardless to make it easier for new developers to join the project. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+**Components** - Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. They are sometimes called "presentational components" and the main concern is how things look. If any other components need to use the component placed here, then it should be moved to the common `Components` folder.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### What is the best way to add/develop features?
+If you want to add the UI in a particular page, first if the component is not related to core business logic add the component to Storybook repo and then you have to add/use components in the specific page folder and also add the responsive css in ComponentName.styles.ts file in the same folder. If there is a need to receive Redux state updates and dispatch actions for the feature then you should create stateUtils.ts file in utils folder of same Component folder and use useDispatch and useSelector hooks.
+If you want to add new state in the redux store then you have to create reducers in the specific page folder in core/reducers folder(if not exists then create). The same we have to do with the actions.
+If you want to call API(If API is not added then you need to add the api in services folder with specific page name folder) then you have to use it in actions.
+You have to add three actions in redux while using apis to handle reject and response in best way.
+In this app we are not using mapDispatchToProps and mapStateToProps instead we are using useDispatch and useSelector hooks.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img src="https://user-images.githubusercontent.com/21957552/192454831-321cd250-585c-4dc5-a902-ba19a905fd74.png" width="50%">
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+** Personal Project **
